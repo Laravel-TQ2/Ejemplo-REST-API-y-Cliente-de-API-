@@ -27,6 +27,13 @@ class PersonaController extends Controller
         return $p;
     }
 
+    public function Eliminar(Request $request, $id){
+        $p = Persona::findOrFail($id);
+        $p -> delete();
+        return [ 'mensaje' => 'Persona eliminada'];
+    }
+
+
     public function Buscar(Request $request, $id){
 
         try {

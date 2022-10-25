@@ -26,3 +26,11 @@ Route::get('/crear', function () {
 });
 
 Route::post("/crear",[PersonaController::class,'Crear']);
+
+
+
+Route::get('/eliminar', function () {
+    return view('eliminar');
+});
+
+Route::post("/eliminar",[PersonaController::class,'Eliminar']);

@@ -22,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post("/persona",[PersonaController::class,"Alta"]);
 Route::get("/persona",[PersonaController::class,"Listar"]);
 Route::get("/persona/{d}",[PersonaController::class,"Buscar"]);
+Route::delete("/persona/{d}",[PersonaController::class,"Eliminar"]);

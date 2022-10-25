@@ -25,4 +25,11 @@ class PersonaController extends Controller
 
         return view('crear',['resultado' => $datos]);
     }
+
+    public function Eliminar(Request $request){
+        $respuesta = Http::delete( env('API_URL') . '/persona/' . $request -> post("id"));
+        $datos = json_decode($respuesta,true);
+
+        return view('eliminar',['resultado' => $datos]);
+    }
 }
